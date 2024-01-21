@@ -1,2 +1,2 @@
 # ubc-aerodesign
-PyPi package for helper utility methods
+PyPi package for networking.py and loggingconfig
