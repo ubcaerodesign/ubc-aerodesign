@@ -2,7 +2,7 @@
 name = "ubcaerodesign"
 version = "0.1.0"
 description = "PyPi package for helper utlilities"
-authors = ["Midora Shiu <midorashiu@gmail.com>"]
+authors = ["Midora <midorashiu@gmail.com>"]
 license = "AGPL"
 readme = "README.md"
 
