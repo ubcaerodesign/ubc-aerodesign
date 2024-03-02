@@ -2,6 +2,7 @@ import zmq
 import logging
 import atexit
 
+
 def make_zmq_socket(ip, port, parent_name, bind_or_connect, pub_or_sub, context=None):
     """
     Helper that makes ZMQ socket. We do this in many places, with different variations on bind or connect, ip, and port
