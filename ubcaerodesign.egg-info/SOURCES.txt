@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+ubcaerodesign/__init__.py
+ubcaerodesign/loggingconfig.py
+ubcaerodesign/networking.py
+ubcaerodesign.egg-info/PKG-INFO
+ubcaerodesign.egg-info/SOURCES.txt
+ubcaerodesign.egg-info/dependency_links.txt
+ubcaerodesign.egg-info/requires.txt
+ubcaerodesign.egg-info/top_level.txt

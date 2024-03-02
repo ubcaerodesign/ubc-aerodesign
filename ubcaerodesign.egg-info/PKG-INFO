@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ubcaerodesign
+Version: 0.3
+Summary: PyPi package for networking.py and loggingconfig
+Home-page: https://github.com/ubcaerodesign/ubcaerodesign
+Download-URL: https://github.com/ubcaerodesign/ubcaerodesign/archive/refs/tags/pypi-0.3.tar.gz
+Author: Midora
+Author-email: midorashiu@gmail.com
+License: GNU Affero General Public License v3.0
+Keywords: aerodesign
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE.txt
+Requires-Dist: zmq
