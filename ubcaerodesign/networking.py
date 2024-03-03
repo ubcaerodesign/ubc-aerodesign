@@ -1,6 +1,9 @@
 import zmq
 import logging
 import atexit
+import sys
+import os
+from ubcaerodesign.loggingconfig import logging_config
 
 
 def make_zmq_socket(ip, port, parent_name, bind_or_connect, pub_or_sub, context=None):
@@ -27,6 +30,12 @@ def make_zmq_socket(ip, port, parent_name, bind_or_connect, pub_or_sub, context=
 
     Returns: ZMQ socket. Can recv() or send_json(), depending on whether it's a publisher or subscriber.
     """
+    # logging_config(file_name, log_stream, log_file=None, log_level=logging.INFO, add_handler=None)
+    logging_config(
+        os.path.basename(__file__),
+        sys.stdout,
+    )
+
     if bind_or_connect not in ["bind", "connect"]:
         raise ValueError("bind_or_connect must be either 'bind' or 'connect'")
     if pub_or_sub not in ["pub", "sub"]:
