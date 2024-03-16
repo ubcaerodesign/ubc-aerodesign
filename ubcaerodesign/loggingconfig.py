@@ -2,7 +2,7 @@
 import logging
 
 
-def logging_config(
+def config_logging(
     file_name, log_stream, log_file=None, log_level=logging.INFO, add_handler=None
 ):
     handlerlist = [logging.StreamHandler(log_stream)]
