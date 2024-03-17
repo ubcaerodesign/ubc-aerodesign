@@ -5,9 +5,8 @@ import atexit
 import sys
 import os
 
-def logging_config(
-    file_name, log_stream, log_file=None, log_level=logging.INFO, add_handler=None
-):
+
+def logging_config(log_stream, log_file=None, log_level=logging.INFO, add_handler=None):
     handlerlist = [logging.StreamHandler(log_stream)]
 
     if log_file is not None:
@@ -22,6 +21,7 @@ def logging_config(
         datefmt="%Y-%m-%d %H:%M:%S",
         handlers=handlerlist,
     )
+
 
 def make_zmq_socket(ip, port, parent_name, bind_or_connect, pub_or_sub, context=None):
     """
@@ -49,7 +49,6 @@ def make_zmq_socket(ip, port, parent_name, bind_or_connect, pub_or_sub, context=
     """
     # logging_config(file_name, log_stream, log_file=None, log_level=logging.INFO, add_handler=None)
     logging_config(
-        os.path.basename(__file__),
         sys.stdout,
     )
 
