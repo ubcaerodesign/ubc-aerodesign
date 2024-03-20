@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ubcaerodesign"
-version = "0.5"
+version = "0.6"
 description = "PyPi package for helper utlilities"
 authors = ["Midora <midorashiu@gmail.com>"]
 license = "AGPL"
@@ -10,7 +10,7 @@ readme = "README.md"
 prefer-active-python = true
 
 [tool.poetry.dependencies]
-python = "3.9.13"
+python = "3.9.*"
 zmq = "^0.0.0"
 
 [build-system]
