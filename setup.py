@@ -3,13 +3,13 @@ from distutils.core import setup
 setup(
     name="ubcaerodesign",
     packages=["ubcaerodesign"],
-    version="0.7",
+    version="0.8",
     license="GNU Affero General Public License v3.0",
     description="PyPi package for networking.py and loggingconfig",
     author="Midora",
     author_email="midorashiu@gmail.com",
     url="https://github.com/ubcaerodesign/ubcaerodesign",
-    download_url="https://github.com/ubcaerodesign/ubcaerodesign/archive/refs/tags/v0.7.tar.gz",
+    download_url="https://github.com/ubcaerodesign/ubcaerodesign/archive/refs/tags/v0.8.tar.gz",
     keywords=["aerodesign"],
     install_requires=["zmq"],
     classifiers=[

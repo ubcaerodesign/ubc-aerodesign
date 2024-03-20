@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ubcaerodesign"
-version = "0.7"
+version = "0.8"
 description = "PyPi package for helper utlilities"
 authors = ["Midora <midorashiu@gmail.com>"]
 license = "AGPL"
