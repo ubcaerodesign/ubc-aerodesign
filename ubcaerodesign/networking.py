@@ -1,26 +1,9 @@
-# Configure logging
-import logging
+"""Helper to facilitate making ZMQ sockets, which we use a lot."""
+
+from logging_helper import get_logger
 import zmq
 import atexit
 import sys
-import os
-
-
-def logging_config(log_stream, log_file=None, log_level=logging.INFO, add_handler=None):
-    handlerlist = [logging.StreamHandler(log_stream)]
-
-    if log_file is not None:
-        handlerlist.append(logging.FileHandler(log_file))
-
-    if add_handler is not None:
-        handlerlist.append(add_handler)
-
-    logging.basicConfig(
-        level=log_level,
-        format="%(asctime)s:%(msecs)03d [%(filename)s - %(levelname)s] \t\t %(message)s",
-        datefmt="%Y-%m-%d %H:%M:%S",
-        handlers=handlerlist,
-    )
 
 
 def make_zmq_socket(ip, port, parent_name, bind_or_connect, pub_or_sub, context=None):
@@ -47,8 +30,7 @@ def make_zmq_socket(ip, port, parent_name, bind_or_connect, pub_or_sub, context=
 
     Returns: ZMQ socket. Can recv() or send_json(), depending on whether it's a publisher or subscriber.
     """
-    # logging_config(file_name, log_stream, log_file=None, log_level=logging.INFO, add_handler=None)
-    logging_config(
+    logger = get_logger(
         sys.stdout,
     )
 
@@ -77,7 +59,7 @@ def make_zmq_socket(ip, port, parent_name, bind_or_connect, pub_or_sub, context=
 
     past_tense = "bound" if bind_or_connect == "bind" else "connected"
 
-    logging.info(f"{parent_name} {pub_or_sub} {past_tense} to {address}")
+    logger.info(f"{parent_name} {pub_or_sub} {past_tense} to {address}")
 
     def cleanup_zmq_context():
         socket.close()
