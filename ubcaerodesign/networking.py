@@ -1,6 +1,6 @@
 """Helper to facilitate making ZMQ sockets, which we use a lot."""
 
-from logging_helper import get_logger
+from .logging_helper import get_logger
 import zmq
 import atexit
 import sys
